@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\DamageIndicator.cs" />
     <Compile Include="Assets\Scripts\HealthPoints.cs" />
     <Compile Include="Assets\Scripts\MovementCharacter.cs" />
+    <Compile Include="Assets\Scripts\ProjectileDestroy.cs" />
     <Compile Include="Assets\dzialajkurwa.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/User/Documents/GitHub/Shootero_Prototype/Shootero_Prototype/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
