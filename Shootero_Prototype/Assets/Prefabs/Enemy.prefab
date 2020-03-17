@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6889973920704561683}
   - component: {fileID: 610952920444789792}
   - component: {fileID: 869031192}
-  - component: {fileID: 1547680638}
+  - component: {fileID: 1224293800}
+  - component: {fileID: 1224293801}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -111,7 +112,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &1547680638
+--- !u!114 &1224293800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6971930121906422343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3267b55317f2f904987c6989c0edfcfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+--- !u!114 &1224293801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,5 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702bb99edcb2f904f87a275d57bd5397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManager: {fileID: 0}
-  dead: 
+  MaxHP: 100
+  CurrentHP: 0
+  DamageReceived: 20

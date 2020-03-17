@@ -5,19 +5,30 @@ using UnityEngine;
 public class DamageIndicator : MonoBehaviour
 {
     [SerializeField]
-    private  HealthPoints scoreManager;
-    public string dead;
+    private int MaxHP = 100;
+    [SerializeField]
+    private int CurrentHP;
+    [SerializeField]
+    private int DamageReceived = 20;
+    private void Start()
+    {
+        CurrentHP = MaxHP;
+    }
     private void OnTriggerEnter(Collider other)
     {
         //Śmierć
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Projectile")
         {
-            dead = "very";
-            LoseHP();
+            CurrentHP -= DamageReceived;
+            Check();
         }
     }
-    private void LoseHP()
+    private void Check()
     {
-        scoreManager.LoseHP(25);
+        if (CurrentHP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
+
 }
