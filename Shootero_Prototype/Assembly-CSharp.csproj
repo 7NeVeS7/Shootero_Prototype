@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\DamageIndicator.cs" />
+    <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\HealthPoints.cs" />
     <Compile Include="Assets\Scripts\MovementCharacter.cs" />
     <Compile Include="Assets\Scripts\ProjectileDestroy.cs" />
