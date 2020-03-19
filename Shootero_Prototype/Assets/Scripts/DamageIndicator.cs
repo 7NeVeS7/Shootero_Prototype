@@ -10,9 +10,12 @@ public class DamageIndicator : MonoBehaviour
     private int CurrentHP;
     [SerializeField]
     private int DamageReceived = 20;
+    [SerializeField]
+    private HealthBar healthBar;
     private void Start()
     {
         CurrentHP = MaxHP;
+        healthBar.SetMaxHealth(MaxHP);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -29,6 +32,7 @@ public class DamageIndicator : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        healthBar.SetHealth(CurrentHP);
     }
 
 }

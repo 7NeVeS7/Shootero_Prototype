@@ -10,15 +10,17 @@ public class HealthPoints : MonoBehaviour
     private int maxHP = 100;
     [SerializeField]
     private int CurrentHP;
+    [SerializeField]
+    private HealthBar healthBar;
     
     private void Start()
     {
-        CurrentHP = maxHP; 
-
+        CurrentHP = maxHP;
+        healthBar.SetMaxHealth(maxHP);
     }
     private void OnTriggerEnter(Collider other)
     {
-        //Śmierć
+  
         if (other.gameObject.tag == "Enemy")
         {
             LoseHP(20);
@@ -39,6 +41,7 @@ public class HealthPoints : MonoBehaviour
         {
             Dead();
         }
+        healthBar.SetHealth(CurrentHP);
     }
     void Dead()
     {
